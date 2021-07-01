@@ -98,7 +98,7 @@ class Album extends Component {
                             </div>
                         ))
                     ) : (
-                        <div className='error-result'>Album has not found!</div>
+                        <div className='error-result'>Album was not found!</div>
                     )}
                 </div>
             </div>
