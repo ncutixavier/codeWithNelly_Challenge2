@@ -42,7 +42,7 @@ class Album extends Component {
             this.setState({ loading: true });
             axios
                 .get(
-                    `https://jsonplaceholder.typicode.com/albums/${this.state.albumId}/photos`
+                    `https://codingwithnellychallenge3.herokuapp.com/api/v1/albums/${this.state.albumId}`
                 )
                 .then((response) => response)
                 .then((json) => {
@@ -83,8 +83,8 @@ class Album extends Component {
                             <div class='loader'></div>
                         </div>
                     ) : this.state.photos.length > 0 ? (
-                        this.state.photos.map((photo, i) => (
-                            <div className='photo' key={i}>
+                        this.state.photos.map((photo) => (
+                            <div className='photo' key={photo.id}>
                                 {photo.thumbnailUrl ? (
                                     <div>
                                         <div className="photo-img">
