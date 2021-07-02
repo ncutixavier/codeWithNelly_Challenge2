@@ -83,8 +83,8 @@ class Album extends Component {
                             <div class='loader'></div>
                         </div>
                     ) : this.state.photos.length > 0 ? (
-                        this.state.photos.map((photo) => (
-                            <div className='photo' key={photo.id}>
+                        this.state.photos.map((photo, i) => (
+                            <div className='photo' key={i}>
                                 {photo.thumbnailUrl ? (
                                     <div>
                                         <div className="photo-img">
